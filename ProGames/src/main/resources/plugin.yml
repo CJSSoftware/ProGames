@@ -1,0 +1,14 @@
+name: ProGames
+version: '1.0'
+main: net.cjsmc.progames.ProGames
+api-version: '1.21'
+load: STARTUP
+authors: [ CJSGamer ]
+description: Progames is a 1.21 minecraft plugin by CJSGamercommands
+commands:
+  bedwars:
+    description: Manage BedWars arenas
+    usage: /<command> <create|join> [name]
+  skywars:
+    description: Manage SkyWars arenas
+    usage: /<command> <create|join> [name]
