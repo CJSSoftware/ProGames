@@ -4,7 +4,7 @@
 
 ## Features
 - **Minigames Included**:
-  - BedWars (inspired by ProBedwars)
+  - BedWars
   - SkyWars
   - Hunger Games
   - Murder Mystery
@@ -14,8 +14,8 @@
 - **Custom Commands**:
   - `/progames <minigame>` for game management
   - Minigame-specific commands, such as:
-    - `/progames bedwars` – Manage and play BedWars
-    - `/progames skywars` – Manage and play SkyWars
+    - `/progames bedwars <command>` – Manage and play BedWars
+    - `/progames skywars <command>` – Manage and play SkyWars
 - **Configuration**:
   - Editable files for easy customization (`Commands.yml`, `config.yml`, `messages.yml`)
   - Supports per-minigame configurations with unique settings
