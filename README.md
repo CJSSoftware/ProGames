@@ -3,7 +3,6 @@
 **ProGames** is a Minecraft plugin developed for Paper 1.21 using Java 21 and Maven. This plugin provides a suite of minigames like BedWars, SkyWars, Hunger Games, and Murder Mystery, allowing players to seamlessly engage in a variety of gameplay modes with simple commands and configuration options. ProGames is designed to bring a Hypixel-like experience to your server, including hub features, minigame selectors, and customizable game settings.
 
 ## Features
-
 - **Minigames Included**:
   - BedWars (inspired by ProBedwars)
   - SkyWars
