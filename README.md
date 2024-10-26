@@ -11,7 +11,8 @@
 - **Hub Features**:
   - Book Selector Menu for server information
   - Minigame Selector in slot 5 for easy access
-- **Custom Commands**:
+- **Main Commands**:
+  - `/progames` Main Command 
   - `/progames <minigame>` for game management
   - Minigame-specific commands, such as:
     - `/progames bedwars <command>` – Manage and play BedWars
