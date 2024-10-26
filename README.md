@@ -25,8 +25,9 @@
 1. Download the latest release of **ProGames** from the [Releases](#) page.
 2. Place the `ProGames.jar` file in your server's `plugins` folder.
 3. Start the server to generate configuration files.
-4. Configure minigame settings as needed in `config.yml`, `Commands.yml`, and `messages.yml`.
-5. Restart the server to apply changes.
+4. Stop the server
+5. Configure minigame settings as needed in `ProGames/config.yml`, `ProGames/Commands.yml`, and `ProGames/Messages.yml`.
+6. Start the server to Load the changes.
 
 ## Commands and Permissions
 
@@ -40,9 +41,9 @@ For full command details and permissions, check the [Commands](#) section.
 ## Configuration
 
 **ProGames** provides various configuration options:
-- **`config.yml`** - General plugin settings.
-- **`Commands.yml`** - Define and customize commands.
-- **`messages.yml`** - Customize in-game messages for each minigame.
+- **`ProGames/config.yml`** - General plugin settings.
+- **`ProGames/Commands.yml`** - Define and customize commands.
+- **`ProGames/Messages.yml`** - Customize in-game messages for each minigame.
 
 Each minigame also has its own configuration folder to fine-tune settings specific to that game.
 
