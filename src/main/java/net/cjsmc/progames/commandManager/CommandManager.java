@@ -2,7 +2,6 @@ package net.cjsmc.progames.commandManager;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import net.cjsmc.progames.commandManager.Command;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandManager implements CommandExecutor {
-    private final Map<String, Method> commands = new HashMap<>();
+    private final Map<String, Map<String, Method>> commands = new HashMap<>();
     private final Object commandObject;
     private final JavaPlugin plugin;
 
@@ -23,9 +22,9 @@ public class CommandManager implements CommandExecutor {
 
     private void registerCommands(Object commandObject) {
         for (Method method : commandObject.getClass().getDeclaredMethods()) {
-            if (method.isAnnotationPresent(net.cjsmc.progames.commandManager.Command.class)) {
+            if (method.isAnnotationPresent(Command.class)) {
                 Command command = method.getAnnotation(Command.class);
-                commands.put(command.name(), method);
+                commands.computeIfAbsent(command.name(), k -> new HashMap<>()).put(command.subcommand(), method);
                 registerCommand(command.name());
             }
         }
@@ -45,13 +44,17 @@ public class CommandManager implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command cmd, String label, String[] args) {
-        Method method = commands.get(cmd.getName());
-        if (method != null) {
-            try {
-                method.invoke(commandObject, sender, args);
-                return true;
-            } catch (Exception e) {
-                e.printStackTrace();
+        Map<String, Method> subcommands = commands.get(cmd.getName());
+        if (subcommands != null) {
+            String subcommand = args.length > 0 ? args[0] : "";
+            Method method = subcommands.get(subcommand);
+            if (method != null) {
+                try {
+                    method.invoke(commandObject, sender, args);
+                    return true;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         return false;
