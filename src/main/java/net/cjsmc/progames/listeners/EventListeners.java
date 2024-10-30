@@ -11,8 +11,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 import net.cjsmc.progames.bedwars.BedWarsGame;
-import net.cjsmc.progames.hungergames.HungerGamesGame;
-import net.cjsmc.progames.skywars.SkyWarsGame;
 import net.cjsmc.progames.murdermystery.MurderMysteryGame;
 
 public class GameEventListener implements Listener {

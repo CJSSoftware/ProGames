@@ -6,9 +6,5 @@ load: STARTUP
 authors: [ CJSGamer ]
 description: Progames is a 1.21 minecraft plugin by CJSGamer
 commands:
-  bwarena:
-    description: Manage BedWars arenas
-    usage: /<command> <create|join> [name]
-  swarena:
-    description: Manage SkyWars arenas
-    usage: /<command> <create|join> [name]
+  example:
+    description: An example command
